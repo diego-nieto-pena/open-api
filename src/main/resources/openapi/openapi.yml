@@ -45,6 +45,12 @@ paths:
             responses:
                 '200':
                     description: All user retrieved successfully
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/UserDTO"
                 '400':
                     description: Bad request
                     content:
